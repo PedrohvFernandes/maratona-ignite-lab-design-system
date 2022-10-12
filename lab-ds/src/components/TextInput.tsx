@@ -5,7 +5,7 @@ export interface TextInputRootProps {
   children: ReactNode
 }
 
-// Pattern(padronização) de composição:
+// Pattern(padronização) de composição: Criar componentes a partir da junção de componentes menores.
 
 function TextInputRoot(props: TextInputRootProps) {
   return (

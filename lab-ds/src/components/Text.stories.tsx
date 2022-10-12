@@ -14,7 +14,7 @@ export default {
     children: 'Span(Text) Medium Default.',
     size: 'md'
   },
-  // Os types de argumentos que ele possui: ex: o Size e o children nesse caso, com isso consigo configurar como que vai aparecer os types nas variações no iframe(canvas) e se eu quiser que apareça etc. Default esta assim, mas por variação eu posso personalizar isso(argTypes/controls(controles)) e os dados(args)
+  // Os types de argumentos que ele possui: ex: o Size e o children nesse caso, com isso consigo configurar como que vai aparecer os types nas variações no iframe(canvas) e se eu quiser que apareça etc. Default esta assim, mas por variação eu posso personalizar isso(argTypes/controls(controles)) e os dados(args). Ou seja, Cria um controle para as variantes de um componente no Storybook
   argTypes: {
   
     size: {
