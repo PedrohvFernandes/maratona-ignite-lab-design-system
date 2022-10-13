@@ -1,7 +1,7 @@
 # Maratona Ignite Lab - Rocketseat <img  align='center' width='100px' src='https://yt3.ggpht.com/ytc/AKedOLQkXnYChXAHOeBQLzwhk1_BHYgUXs6ITQOakoeNoQ=s176-c-k-c0x00ffffff-no-rj'/>
 
 <p align='center'>
-  <img src=''/>
+  <img src='https://github.com/PedrohvFernandes/maratona-ignite-lab-design-system/blob/main/public/Wallpaper%20-%201920x1080.png?raw=true'/>
 </p>
 
 ## Sobre:
@@ -15,16 +15,16 @@
 ## 🌐 Demonstração do app na web:
 
 ### Web:
-<img src=''/>
+<img src='https://github.com/PedrohvFernandes/maratona-ignite-lab-design-system/blob/main/public/Screenshots/ScreenProjeto.png?raw=true'/>
 
 ## 🌐 Demonstração do StoryBook:
 
 ### Web:
-<img src=''/>
+<img src='https://github.com/PedrohvFernandes/maratona-ignite-lab-design-system/blob/main/public/Screenshots/Screen1Storybook.png'/>
 
 ## Deploy
 
-- Deploy do app Web(Vercel):
+- Deploy do app Web(Vercel): https://maratona-ignite-lab-design-system.vercel.app
 - Deploy do Storybook(Github pages): https://pedrohvfernandes.github.io/maratona-ignite-lab-design-system/
 
 ## ✨Tecnologias:
