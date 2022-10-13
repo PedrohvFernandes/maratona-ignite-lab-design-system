@@ -1,0 +1,40 @@
+# https://docs.github.com/pt/actions/using-workflows/workflow-syntax-for-github-actions
+# Sintaxe do github actions pra fazer o CI/CD do storybook a cada build
+
+# Nome do deploy
+name: Deploy Storybook
+
+# Quando que eu quero executar esse workflow: so vai executar quando, houver um push na branch main(principal) que é o codigo que vai para a produção
+on:
+  push:
+    branches:
+      - main
+
+# Alguns trabalhos, então é dessa forma que funciona a Api do Github actions, cada serviço de integração continua, tem a sua propria Api. Dou nome pro meu job que tenha sentido, nesse caso é buildar e depois realizar o deploy. o Runs-on é a onde ele vai rodar
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    # Quais comando eu quero executar nesse trabalho, para que o meu deploy seja feito. O primeiro comando que tem como nome Checkout, esse Nome é voce que da. Esse comando usa(uses) uma action do github actions. Actions é algo que o Github oferece para a gente, e essa action checkout@v3 ela baixa a versão atualizada do nosso codigo. A proxima action usada é para instalar o node no nosso ambiente no caso o ubuntu-latest, o with é pra dizer qual a versão é para usar do node.
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Esse comando é para instalar as dependencias, com o npm ci, que ele nada mais que o npm install so que para ambientes não interativos, a onde eu não consigo dar um N/Y, so vai instalar as dependencias so de produção do projeto e por ultimo ele não vai mexer nas versões que estão no package.json
+      - name: Install dependencies
+        run: npm ci
+
+      # Apos isso o build é feito, o bundler no caso, a conversão de codigo
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      # Depois é feito o deploy do build(comando do build, flags e tokens). A flag --existing... serve para passar o diretorio da pasta do build e a flag ci é a mesma coisa pro npm ci, ele avisa pro comando deploy-storybook para não pedir nem uma confirmação, porque a gente esta num ambiente de CI que não é interativo. E as variaveis de ambientes já estão definidas no propio fluxo do github actions: GITHUB_TOKEN(Da acesso pro npm run deploy-storybook criar a branch e acessar no repo)
+      - name: Deploy Storybook
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
