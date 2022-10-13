@@ -1,12 +1,12 @@
 # Maratona Ignite Lab - Rocketseat <img  align='center' width='100px' src='https://yt3.ggpht.com/ytc/AKedOLQkXnYChXAHOeBQLzwhk1_BHYgUXs6ITQOakoeNoQ=s176-c-k-c0x00ffffff-no-rj'/>
 
 <p align='center'>
-<img src=''/>
+  <img src=''/>
 </p>
 
 ## Sobre:
 
-### Do design ao codigo(Design System), com a padronização tanto no design UI/UX, quanto de componentes com a lib Storybook. 
+### Do design ao código(Design System), com a padronização tanto no design UI/UX, quanto de componentes com a lib Storybook de um design simples de um form, mas que mesmo sendo o mais simples possível, da para extrair o máximo de padronização(patterns) dos componentes e fazer o storybook ficar super recheado e ter um centro dos componentes, para que o time de devs não fique perdidos com qual cor, tamanho, fonte etc usar em um botão por exemplo. E como boa pratica foi feito um CI/CD para que cada atualização no storybook é feito um build e o deploy no github pages automaticamente utilizando o Github Actions.
 
 ## 🔖 Layout, prototipo e demonstração de como sera feito a aplicação
 
