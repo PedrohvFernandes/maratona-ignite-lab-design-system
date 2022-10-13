@@ -32,6 +32,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif']
+      },
+      backgroundImage: {
+        react: "url('/BackgroundReact.png')",
       }
     }
   },
