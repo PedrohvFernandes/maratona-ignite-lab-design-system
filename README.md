@@ -47,6 +47,29 @@
 - Clsx
 - Storybook addons (a11y) for easily Acessibility.
 
+## Getting started
+
+#### Para clonar o projeto e abrir na pasta raiz dele.
+```
+  git clone https://github.com/PedrohvFernandes/maratona-ignite-lab-design-system
+  cd maratona-ignite-lab-design-system
+```
+
+#### Inicie o comando abaixo para instalar as dependencias
+```
+  npm install
+```
+
+#### Inicie o comando abaixo para ver a interface localmente(Localhost:${PORTA})
+```
+  npm run dev
+```
+
+#### Inicie o comando abaixo para ver a interface do StoryBook localmente(Localhost:${PORTA})
+```
+  npm run storybook
+```
+
 ## 👨‍💻 Autor:
 
 - Linkedin: https://www.linkedin.com/in/pedro-henrique-vieira-fernandes
